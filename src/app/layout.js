@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import Head from "next/head";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -11,14 +12,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
         <script
           async
           defer
           data-domain="foundthemode.com"
           src="https://plausible.io/js/script.js"
         ></script>
-      </head>
+      </Head>
       <body className={inter.className}>{children}</body>
     </html>
   );
