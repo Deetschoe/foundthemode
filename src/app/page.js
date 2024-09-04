@@ -189,6 +189,19 @@ const questions = [
 ];
 
 export default function FounderModeQuiz() {
+  useEffect(() => {
+    const plausibleScript = document.createElement('script');
+    plausibleScript.setAttribute('async', true);
+    plausibleScript.setAttribute('defer', true);
+    plausibleScript.setAttribute('data-domain', 'foundthemode.com');
+    plausibleScript.src = 'https://plausible.io/js/script.js';
+    document.head.appendChild(plausibleScript);
+
+    return () => {
+      document.head.removeChild(plausibleScript);
+    };
+  }, []);
+
   const [stage, setStage] = useState('intro');
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
