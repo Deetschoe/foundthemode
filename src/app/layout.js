@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         <script
           async
           defer
-          data-domain="www.foundthemode.com"
+          data-domain="foundthemode.com"
           src="https://plausible.io/js/script.js"
         ></script>
       </Head>
