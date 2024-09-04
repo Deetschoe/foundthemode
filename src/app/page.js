@@ -8,18 +8,17 @@ import ASCIIArtBackground from './ASCIIArtBackground';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 const questions = [
-    {
-      type: 'image',
-      text: "What does this represent to you?",
-      image: "./images/y.png",
-      options: [
-        { text: "YCombinator", score: 2 },
-        { text: "An Emoji", score: 1 },
-        { text: "The letter Y", score: 0 },
-        { text: "YComnbinete", score: 0 }
-
-      ]
-    },
+  {
+    "type": "text",
+    "text": "How often do you reflect on the long-term impact of your decisions beyond immediate results?",
+    "options": [
+      { "text": "Never", "score": 0 },
+      { "text": "Rarely", "score": 1 },
+      { "text": "Sometimes", "score": 2 },
+      { "text": "Often", "score": 3 },
+      { "text": "Always", "score": 4 }
+    ]
+  },
     {
       type: 'image',
       text: "This shows up in your mail, fear or success?",
@@ -27,6 +26,17 @@ const questions = [
       options: [
         { text: "Success", score: 2 },
         { text: "Fear", score: 0 }
+      ]
+    },
+    {
+      "type": "text",
+      "text": "Do you believe you should adapt to market trends or create entirely new trends?",
+      "options": [
+        { "text": "Always adapt to trends", "score": 0 },
+        { "text": "Mostly follow trends", "score": 1 },
+        { "text": "Balance of both", "score": 2 },
+        { "text": "Mostly create new trends", "score": 3 },
+        { "text": "Always strive to create new trends", "score": 4 }
       ]
     },
     {
@@ -43,7 +53,7 @@ const questions = [
     },
     {
       type: 'image',
-      text: "Do you feel locked up? or Locked in?",
+      text: "Do you feel Locked Up? or Locked In?",
       image: "./images/inspo.png",
       options: [
         { text: "Locked In", score: 2 },
@@ -90,6 +100,18 @@ const questions = [
       { text: "Sometimes", score: 2 },
       { text: "Often", score: 3 },
       { text: "Always", score: 4 }
+    ]
+  },
+  {
+    type: 'image',
+    text: "What does this represent to you?",
+    image: "./images/y.png",
+    options: [
+      { text: "YCombinator", score: 2 },
+      { text: "An Emoji", score: 1 },
+      { text: "The letter Y", score: 0 },
+      { text: "YComnbinete", score: 0 }
+
     ]
   },
   {
